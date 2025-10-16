@@ -14,7 +14,7 @@ app.layout = html.Div([
     # Header principal
     html.Header([
         html.Div([
-            html.H1("Técnicas de Modelamiento", className='header-title'),
+            html.H1("Técnicas de Modelamiento"),
         ], className='header-content')
     ], className='app-header'),
     

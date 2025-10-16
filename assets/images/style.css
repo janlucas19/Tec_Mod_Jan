@@ -1,0 +1,241 @@
+/* ==============================
+   ESTILO GENERAL
+   ============================== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f7f9fc;
+    color: #2b2b2b;
+}
+
+/* ==============================
+   ENCABEZADO
+   ============================== */
+.app-header {
+    background-color: #1e3d59;
+    color: #fff;
+    text-align: center;
+    padding: 25px 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.header-title {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.header-subtitle {
+    margin: 0;
+    font-size: 1em;
+    color: #cfd8e4;
+}
+
+/* ==============================
+   BARRA DE NAVEGACIÓN
+   ============================== */
+.navigation {
+    background-color: #e4e9f0;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 3px solid #1e3d59;
+}
+
+.nav-links-container {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.nav-link {
+    background-color: #b0c4de;
+    color: #1e2a36;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: all 0.25s ease;
+    border: 1px solid #8da3ba;
+}
+
+.nav-link:hover {
+    background-color: #4169e1;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   CONTENIDO PRINCIPAL
+   ============================== */
+.main-content {
+    background-color: #ffffff;
+    max-width: 1200px; /* Aumentado para acomodar el diseño horizontal */
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.main-content h2 {
+    color: #1e3d59;
+}
+
+.main-content p {
+    line-height: 1.6;
+}
+
+/* ==============================
+   FORMULAS Y GRAFICOS
+   ============================== */
+.formula {
+    background-color: #f0f4f8;
+    border-left: 5px solid #1e3d59;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.graph-container {
+    margin-top: 30px;
+}
+
+/* ==============================
+   DISEÑO HORIZONTAL DEL MODELO POBLACIONAL
+   ============================== */
+
+/* Contenedor principal en disposición horizontal */
+.model-horizontal-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 25px 0;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Panel de parámetros - lado izquierdo */
+.parameters-sidebar {
+    flex: 0 0 320px;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.parameters-sidebar h3 {
+    color: #1e3d59;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1e3d59;
+    text-align: center;
+}
+
+.parameter-group {
+    margin-bottom: 20px;
+}
+
+.parameter-item {
+    margin-bottom: 15px;
+}
+
+.parameter-item label {
+    display: block;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 6px;
+    font-size: 0.95em;
+}
+
+.parameter-item input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+}
+
+.parameter-item input:focus {
+    border-color: #1e3d59;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(30, 61, 89, 0.1);
+}
+
+/* Área de gráfica - lado derecho */
+.graph-main {
+    flex: 1;
+    min-height: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.graph-main h3 {
+    color: #1e3d59;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Información del modelo */
+.model-info {
+    background: #f0f7ff;
+    border-left: 4px solid #1e3d59;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.model-info h4 {
+    color: #1e3d59;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.model-info ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.model-info li {
+    margin-bottom: 5px;
+}
+
+/* Gráfica de ejemplo */
+.graph-placeholder {
+    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-style: italic;
+}
+
+/* Responsivo: apilar en pantallas pequeñas */
+@media (max-width: 900px) {
+    .model-horizontal-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .parameters-sidebar {
+        flex: none;
+        width: 100%;
+    }
+    
+    .graph-main {
+        min-height: 300px;
+    }
+    
+    .graph-placeholder {
+        height: 250px;
+    }
+}
